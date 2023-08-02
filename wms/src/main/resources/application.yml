@@ -1,0 +1,18 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/wms?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&rewriteBatchedStatements=true&useSSL=true
+    username: root
+    password: ldd180838
+  main:
+    banner-mode: off  # 关闭SpringBoot启动图标(banner)
+
+#mybatis日志，显示具体的SQL语句放在application.properties中
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+  global-config:
+    banner: false
